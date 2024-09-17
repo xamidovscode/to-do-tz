@@ -18,7 +18,7 @@ class TaskSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         due_date = attrs.get("due_date")
-        now = datetime.now(timezone.utc)  # Use the same timezone as `due_date`
+        now = datetime.now(timezone.utc)
         if due_date and due_date <= now:
             raise serializers.ValidationError({"due_date": "Due date must be in the future."})
         return attrs
