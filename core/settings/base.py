@@ -55,7 +55,9 @@ THIRD_PARTY_APPS = [
     'drf_spectacular_sidecar',
     "corsheaders",
     'rest_framework_simplejwt',
-    'django_filters'
+    'django_filters',
+    "debug_toolbar",
+
 ]
 
 REST_FRAMEWORK = {

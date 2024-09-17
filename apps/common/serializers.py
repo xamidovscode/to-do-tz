@@ -12,6 +12,5 @@ class TaskSerializer(serializers.ModelSerializer):
             'description',
             'status',
             'due_date',
-            'user',
             'user_data'
         )
