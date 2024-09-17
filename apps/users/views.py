@@ -1,7 +1,8 @@
 from rest_framework import generics, status
+from rest_framework.views import APIView
+from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 from . import serializers
 from rest_framework.response import Response
-
 from .models import User
 
 
@@ -15,3 +16,5 @@ class LoginView(generics.CreateAPIView):
         data = serializer.data
         data['tokens'] = user.tokens()
         return Response(data, status=status.HTTP_200_OK)
+
+
