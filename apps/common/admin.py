@@ -1,3 +1,4 @@
 from django.contrib import admin
+from apps.common import models as common
 
-# Register your models here.
+admin.site.register(common.Task)

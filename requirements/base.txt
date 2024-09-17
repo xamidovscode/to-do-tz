@@ -1,4 +1,4 @@
-django
+Django==4.2.11
 psycopg2-binary
 python-environ
 django-cors-headers
@@ -6,3 +6,4 @@ django-jazzmin
 drf-yasg
 djangorestframework
 django-filter
+djangorestframework-simplejwt==5.3.1
