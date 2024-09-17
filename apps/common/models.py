@@ -40,5 +40,4 @@ class Task(BaseModel):
         return {
             "id": self.user.id,
             "phone": str(self.user.phone),
-            'first_name': self.user.first_name
         }
