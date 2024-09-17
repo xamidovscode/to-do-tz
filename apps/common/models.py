@@ -29,7 +29,16 @@ class Task(BaseModel):
         verbose_name=_("Status")
     )
     due_date = models.DateTimeField(null=True, blank=True)
+    is_active = models.BooleanField(default=True)
     user = models.ForeignKey(
         "users.User", on_delete=models.CASCADE, related_name="tasks",
         verbose_name=_("User")
     )
+
+    @property
+    def user_data(self):
+        return {
+            "id": self.user.id,
+            "phone": str(self.user.phone),
+            'first_name': self.user.first_name
+        }
